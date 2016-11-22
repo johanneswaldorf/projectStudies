@@ -1,0 +1,2 @@
+# projectStudies
+I hate school
