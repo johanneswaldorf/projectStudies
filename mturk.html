@@ -1,0 +1,156 @@
+<!-- HIT template: WebsiteDataCollection-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
+<meta content="width=device-width,initial-scale=1" name="viewport" />
+<section class="container" id="WebsiteDataCollection"><!-- Instructions -->
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<div class="panel panel-primary"><!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature --><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Website data collection - Instructions</strong> <span class="collapse-text">(Click to expand)</span> </a>
+<div class="panel-body" id="instructionBody">
+<b>How to find the the Second Document:</b></br>
+<ul>
+<li>Take the title of the first document.</li>
+<ul><li> E.g.: "<span style="background-color: #00FFFF">Jahresabschluss zum Geschäftsjahr vom 01.01.2010 bis zum 31.12.2010</span>###################Berichtigung der Veröffentlichung vom <span style="background-color: #FFFF00">15.07.2011"</span></ul></li>
+<li>The last date of this title gives you the <b>published date</b> of the second document, in this case "<span style="background-color: #FFFF00">15.07.2011</span>"</li>
+<li>The first part of this title gives you the <b>name of the second document</b>, in this case "<span style="background-color: #00FFFF">Jahresabschluss zum Geschäftsjahr vom 01.01.2010 bis zum 31.12.2010</span>"</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- End Instructions --><!-- Layout -->
+
+
+<div class="row">
+<div class="col-xs-12 col-md-8 col-md-offset-2 image">
+<h1>Download and renaming of financial statements</h1><br>
+<b>Go to this Website: </b><a class="dont-break-out" href="https://www.bundesanzeiger.de/ebanzwww/wexsservlet?&genericsearch_param.fulltext=${company_name}" target="_blank"><h5>Bundesanzeiger</h5></a>
+<!-- <a href="https://www.bundesanzeiger.de/ebanzwww/wexsservlet?&genericsearch_param.fulltext" onclick="location.href=this.href+${website_url}";return false;">Link</a>
+-->
+</div>
+</div>
+
+<div class="row">
+<div class="col-xs-12 col-md-8 col-md-offset-2 fields">
+
+
+<b>First document:</b></br>
+Find publication which was published on: <b>${publication_date}</b></br>
+<ul>
+<li>If there are multiple entries for this date compare the names:</li>
+<ul><li>${statement_name}</li></ul>
+</ul>
+
+</br>
+<b>Download first document:</b></br>
+1. Click on document, enter captcha, and open print version (red text "<font color="red">Druckversion</font>")</br>
+2. Press Command / Control F and search for " Bestatigunsvermerk "</br>
+<ul><li>Did you get a hit? If yes, <b>check this off: </b><input id="vermerk_corrected" name="vermerk_corrected" type="checkbox" value="1" /></li></ul></br>
+3. Download print version as <b>PDF</b> and name it: ${name_correction}</br>
+4. Upload file:<input name="Datei" type="file" size="500000" accept="text/*"></br>
+</br>
+<b>Second document:</b></br>
+Find second document (see instructions)<br>
+1. Click on document, enter captcha, and open print version (red text "<font color="red">Druckversion</font>")</br>
+2. Press Command / Control F and search for " Bestatigunsvermerk "</br>
+<li>Did you get a hit? If yes <b>check this off: </b><input id="vermerk_original" name="vermerk_original" type="checkbox" value="1" /></li></br>
+3. Download print version as <b>PDF</b> and name it: ${name_original}</br>
+4. Upload file:<input name="Datei" type="file" size="500000" accept="text/*"></br>
+
+
+
+
+
+
+
+
+
+  <!-- Here the results of the form submission will be displayed -->
+  <div id="output"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- End Layout --><!-- Please note that Bootstrap CSS/JS and JQuery are 3rd party libraries that may update their url/code at any time. Amazon Mechanical Turk (MTurk) is including these libraries as a default option for you, but is not responsible for any changes to the external libraries --></section>
+
+<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet" /><!-- Open internal style sheet -->
+<style type="text/css">.form-inline select.form-control{
+  width: 100%;
+}
+input.form-control{
+  width: 100%;
+}
+#collapseTrigger{
+  color:#fff;
+  display: block;
+  text-decoration: none;
+}
+#submitButton{
+  white-space: normal;
+}
+.image{
+  margin-bottom: 15px;
+}
+.group-label{
+  display: block;
+}
+.radio-inline>label{
+  font-weight: normal;
+}
+.col-margin{
+  padding: 0 2px 0 0;
+  margin-bottom: 5px;
+}
+.col-margin:last-child{
+  padding-right: 0;
+}
+.form-group, .form-group.col-margin{
+  width: 100%;
+  margin-bottom: 5px;
+}
+.form-group.fieldset, .fieldset{
+  margin-bottom: 15px;
+}
+.hour-label{
+  margin-top: 5px;
+  font-weight: normal;
+}
+/* CSS for breaking long words/urls */
+.dont-break-out {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+</style>
+<!-- Close internal style sheet --><script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" integrity="sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4" crossorigin="anonymous"></script><script>
+  $(document).ready(function() {
+    // Instructions expand/collapse
+    var content = $('#instructionBody');
+    var trigger = $('#collapseTrigger');
+    content.hide();
+    $('.collapse-text').text('(Click to expand)');
+    trigger.click(function(){
+      content.toggle();
+      var isVisible = content.is(':visible');
+      if(isVisible){
+        $('.collapse-text').text('(Click to collapse)');
+      }else{
+        $('.collapse-text').text('(Click to expand)');
+      }
+    });
+    // end expand/collapse
+  });
+</script>
